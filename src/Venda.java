@@ -1,5 +1,5 @@
 
-import java.awt.List;
+import java.util.List;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -16,7 +16,7 @@ public class Venda {
             Funcionario funcionario, Cliente cliente) {
         this.vendaId = vendaId;
         this.itensVendidos = new ArrayList<>();
-        this.dataHora = new LocalDateTime.now();
+        this.dataHora = LocalDateTime.now();
         this.funcionario = funcionario;
         this.cliente = cliente;
     }
@@ -27,7 +27,7 @@ public class Venda {
         this.vendaId = vendaId;
     }
     public ArrayList<Medicamento> getItensVendidos() {
-        return itensVendidos;
+        return (ArrayList<Medicamento>) itensVendidos;
     }
     public void setItensVendidos(List itensVendidos) {
         this.itensVendidos = itensVendidos;
@@ -57,10 +57,7 @@ public class Venda {
         this.cliente = cliente;
     }
     public void aplicarDesconto(double valor) {
-        this.valorTotal;
-    }
-    public double getValorTotal(){
-        return valorTotal;
+        double valorTotal1 = this.valorTotal;
     }
     public void adicionarItem(Medicamento m, int quantidade) throws Exception{
         m.diminuirQuantidade(quantidade);

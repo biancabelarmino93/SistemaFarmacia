@@ -1,6 +1,6 @@
 
 
-public class Gerente extends Caixa {
+public class Gerente extends Funcionario {
     public Gerente(String nome, String matricula){
         this.setNome(nome);
         this.setMatricula(matricula);

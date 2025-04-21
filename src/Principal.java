@@ -6,7 +6,7 @@ import java.time.LocalDate;
 public class Principal {
 
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Gerente g1 = new Gerente("Pato Donald", "007");
         Gerente g2 = new Gerente("João da Silva", "002");
         Caixa f1 = new Caixa("Pedro", "003");
@@ -18,7 +18,7 @@ public class Principal {
         
         
         Medicamento m1,m2;
-        m1 = new Medicamento("Dipirona",5.00,"001",100,"05/11/2028");
+        m1 = new Medicamento("Dipirona",5.00,"001",100,"05/11/2028") {};
         m2 = new Medicamento("Buscopam",15.00,"002",200,"06/12/202");
         f1.adicionarMedicamento(m1);
         f2.adicionarMedicamento(m2);
@@ -35,7 +35,7 @@ public class Principal {
         System.out.println("Venda 1 - Total antes dos descontos: R$" + v1.getValorTotal());
         
         List<Desconto> descontosV1 = new ArrayList<>();
-        descontosV1.add(new DescontoClienteRegistrado());
+        descontosV1.add(new DescontoClienteRegistrado(c1));
         descontosV1.add(new DescontoGerente(g1, 10)); // 10% pelo gerente
         descontosV1.add(new DescontoGerente(g2, 10)); // 10% pelo gerente
         descontosV1.add(new DescontoPromocional(5)); // 5% promoção
