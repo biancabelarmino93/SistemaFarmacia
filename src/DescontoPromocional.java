@@ -8,7 +8,7 @@ public class DescontoPromocional implements Desconto{
     @Override
     public void aplicarDesconto(Venda venda){
         double desconto = venda.getValorTotal()*(percentual/100);
-        venda.setValorTotal(venda.getValorTotal() - desconto);
+        venda.aplicarDesconto(desconto);
         System.out.println("Desconto promocional de " + percentual + "%aplicado");
     }
 }

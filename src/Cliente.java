@@ -20,7 +20,8 @@ public class Cliente {
     public String getCpf(){
        return this.cpf;
    }
-   public boolean isCpfValido(){
-       return cpf != null && cpf.matches("\\d{11}");
-   }
+
+    boolean cpfValido() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

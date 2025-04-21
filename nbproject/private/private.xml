@@ -3,11 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/rosenhaim/NetBeansProjects/farmacia/src/Caixa.java</file>
-            <file>file:/home/rosenhaim/NetBeansProjects/farmacia/src/Gerente.java</file>
-            <file>file:/home/rosenhaim/NetBeansProjects/farmacia/src/Medicamento.java</file>
-            <file>file:/home/rosenhaim/NetBeansProjects/farmacia/src/Funcionario.java</file>
-            <file>file:/home/rosenhaim/NetBeansProjects/farmacia/src/Principal.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/Principal.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/Caixa.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/Gerente.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/Cliente.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/Inventario.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/Venda.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/Funcionario.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/Desconto.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/Medicamento.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/DescontoClienteRegistrado.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/DescontoGerente.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/DescontoPromocional.java</file>
+            <file>file:/C:/Users/bianc/OneDrive/Documentos/NetBeansProjects/farmacia/src/InventarioInsuficienteException.java</file>
         </group>
     </open-files>
 </project-private>

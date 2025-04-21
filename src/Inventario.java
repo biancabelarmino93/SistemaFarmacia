@@ -1,10 +1,11 @@
 
 import java.util.*;
 import java.util.HashMap;
+import java.util.Map;
 
 
 public class Inventario {
-    private HashMap<String, Medicamento> medicamentos;
+    private final Map<String, Medicamento> medicamentos;
     
     public Inventario(){
         medicamentos = new HashMap<>();
@@ -15,6 +16,11 @@ public class Inventario {
     }
     public Medicamento buscarPorId(String id){
         return medicamentos.get(id);
+    }
+    public void listarMedicamentos(){
+        for(Medicamento m : medicamentos.values()){
+            System.out.println(m);
+        }
     }
     public void removerMedicamento(String id){
         medicamentos.remove(id);

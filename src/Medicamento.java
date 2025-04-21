@@ -1,7 +1,6 @@
 
-import java.util.Date;
 
-public class Medicamento implements Descontavel{
+public class Medicamento implements Desconto{
    private String nome;
    private double valor;
    private String id;
@@ -61,8 +60,8 @@ public class Medicamento implements Descontavel{
         return this.dataValidade;
     }
 
-    void diminuirQuantidade(int quantidade) {
-        if (this.quantidade >= quantidade){
-            this.quantidade -= quantidade;
-        }else {
- throw new IllegalArgumentException("Quantidade insuficiente em " + "estoque.");}}
+    public void diminuirQuantidade(int quantidadeVendida) throws Exception{
+        if (this.quantidade > quantidadeVendida){
+            throw new Exception("Inventario insuficiente para o medicamento: " + nome);
+        }this.quantidade -= quantidadeVendida;
+        }

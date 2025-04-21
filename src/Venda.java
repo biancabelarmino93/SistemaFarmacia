@@ -16,7 +16,7 @@ public class Venda {
             Funcionario funcionario, Cliente cliente) {
         this.vendaId = vendaId;
         this.itensVendidos = new ArrayList<>();
-        this.dataHora = new LocalDateTime<>();
+        this.dataHora = new LocalDateTime.now();
         this.funcionario = funcionario;
         this.cliente = cliente;
     }
@@ -26,10 +26,10 @@ public class Venda {
     public void setVendaId(int vendaId) {
         this.vendaId = vendaId;
     }
-    public List getIntensVendidos() {
+    public ArrayList<Medicamento> getItensVendidos() {
         return itensVendidos;
     }
-    public void setIntensVendidos(List itensVendidos) {
+    public void setItensVendidos(List itensVendidos) {
         this.itensVendidos = itensVendidos;
     }
     public double getValorTotal() {
@@ -56,33 +56,33 @@ public class Venda {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-    void aplicarDesconto(double desconto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void aplicarDesconto(double valor) {
+        this.valorTotal;
     }
-    public void adicionarItem(Medicamento medicamento, int quantidade) throws InventarioInsuficienteException{
-        if(medicamento.getQuantidade() >= quantidade){
-            Medicamento vendido = Medicamento(
-            medicamento.getNome(), medicamento.getValor(), 
-                    medicamento.getQuantidade(), medicamento.getDataValidade()
-           );
-           itensVendidos.add(vendido);
-           medicamento.diminuirQuantidade(quantidade);
-           calcularTotal();
-        }else{
-            throw new InventarioInsuficienteException("Inventario insuficiente para " + medicamento.getNome());
-        }
+    public double getValorTotal(){
+        return valorTotal;
     }
-    private void calcularTotal(){
-        valorTotal =0;
-        for(Medicamento med : itensVendidos){
-            valorTotal += med.getValor()*med.getQuantidade();
+    public void adicionarItem(Medicamento m, int quantidade) throws Exception{
+        m.diminuirQuantidade(quantidade);
+        for(int i = 0; i < quantidade; i++){
+            itensVendidos.add(m);
         }
+        valorTotal += m.getValor()*quantidade;
+    
+    }
+    public void imprimirRecibo(){
+        System.out.println("   RECIBO   ");
+        for(Medicamento m:itensVendidos){
+            System.out.println(m);
+        }
+        System.out.println("Total: R$" + valorTotal);
+        System.out.println("Funcionario: " + funcionario.getNome());
+        if(cliente != null)System.out.println("Cliente: " + cliente.getNome());
+        System.out.println();
     }
 
     private Medicamento Medicamento(String nome, double valor, int quantidade, String dataValidade) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    }
 
-   
-
-}

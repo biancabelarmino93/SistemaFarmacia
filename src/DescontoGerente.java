@@ -11,7 +11,7 @@ public class DescontoGerente implements Desconto{
     public void aplicarDesconto(Venda venda){
         if(funcionario instanceof Gerente){
             double desconto = venda.getValorTotal()*(percentual/100);
-            venda.setValorTotal(venda.getValorTotal() - desconto);
+            venda.aplicarDesconto(desconto);
             System.out.println("Desconto de " + percentual + "% aplicado pelo gerente.");
         }else{
             throw new RuntimeException("Apenas gerentes podem aplicar este desconto.");

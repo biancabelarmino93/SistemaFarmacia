@@ -3,7 +3,7 @@ import java.awt.Button;
 
 public class Funcionario {
     
-   public String nome;
+   private String nome;
    private String matricula;
    Inventario inventario;
    
