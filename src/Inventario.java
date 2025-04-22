@@ -1,14 +1,12 @@
 
-import java.util.*;
 import java.util.HashMap;
 import java.util.Map;
-
 
 public class Inventario {
     private final Map<String, Medicamento> medicamentos;
     
     public Inventario(){
-        medicamentos = new HashMap<>();
+        this.medicamentos = new HashMap<>();
     }
     
     public void adicionarMedicamento(Medicamento medicamento){

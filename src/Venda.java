@@ -2,6 +2,7 @@
 import java.util.List;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.time.format.DateTimeFormatter;
 
 public class Venda {
     
@@ -57,7 +58,7 @@ public class Venda {
         this.cliente = cliente;
     }
     public void aplicarDesconto(double valor) {
-        double valorTotal1 = this.valorTotal;
+        this.valorTotal -= valor;
     }
     public void adicionarItem(Medicamento m, int quantidade) throws Exception{
         m.diminuirQuantidade(quantidade);
@@ -69,14 +70,20 @@ public class Venda {
     }
     public void imprimirRecibo(){
         System.out.println("   RECIBO   ");
-        for(Medicamento m:itensVendidos){
-            System.out.println(m);
-        }
+    
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String dataHoraFormatada = dataHora.format(formatter);
+        System.out.println("Data e hora da venda: " + dataHoraFormatada);
+    
+        for (Medicamento m : itensVendidos) {
+        System.out.println(m);
+    }
+    
         System.out.println("Total: R$" + valorTotal);
         System.out.println("Funcionario: " + funcionario.getNome());
-        if(cliente != null)System.out.println("Cliente: " + cliente.getNome());
+        if (cliente != null) System.out.println("Cliente: " + cliente.getNome());
         System.out.println();
-    }
+}
 
     private Medicamento Medicamento(String nome, double valor, int quantidade, String dataValidade) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

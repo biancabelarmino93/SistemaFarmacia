@@ -77,6 +77,12 @@ public class Medicamento implements Desconto {
     }
 
     public void diminuirQuantidade(int quantidadeVendida) throws Exception {
-        if (this.quantidade > quantidadeVendida) {
+        if (this.quantidade < quantidadeVendida) {
             throw new Exception("Inventario insuficiente para o medicamento: " + nome);
         }this.quantidade -= quantidadeVendida;
+    }
+
+    @Override
+    public void aplicarDesconto(Venda venda) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }}

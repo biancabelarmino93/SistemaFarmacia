@@ -10,7 +10,6 @@ public class Cliente {
         this.nome = nome;
         this.cpf = cpf;
     }
-    
     public String getClientId(){
        return this.clienteId;
    }
@@ -19,9 +18,8 @@ public class Cliente {
    }
     public String getCpf(){
        return this.cpf;
-   }
-
-    boolean cpfValido() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    public boolean cpfValido() {
+        return this.cpf != null && this.cpf.length()==11;
     }
 }

@@ -5,8 +5,6 @@ public class DescontoClienteRegistrado implements Desconto{
     public DescontoClienteRegistrado(Cliente cliente){
         this.cliente = cliente;
     }
-    
-    
     @Override
     public void aplicarDesconto(Venda venda){
         if (cliente.cpfValido()){
@@ -15,5 +13,4 @@ public class DescontoClienteRegistrado implements Desconto{
             System.out.println("Desconto de 5% para clientes registrados aplicado.");
         }
     }
-    
 }

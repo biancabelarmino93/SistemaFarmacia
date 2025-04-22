@@ -6,7 +6,6 @@ public class Caixa extends Funcionario {
         this.setNome(nome);
         this.setMatricula(matricula);
     }
-     
     public void processarPagamento(double valor){
         System.out.println("Pagamento de R$" + valor + " processado pelo caixa" + getNome());
     }

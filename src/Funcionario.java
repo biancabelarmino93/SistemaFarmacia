@@ -11,11 +11,9 @@ public class Funcionario {
        this.nome = nome;
        this.matricula = matricula;
    }
-   
    public Funcionario(){
        this.inventario = new Inventario();
    }
-  
     public String getNome(){return this.nome;}
     public String getMatricula(){return this.matricula;}
     

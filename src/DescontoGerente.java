@@ -16,6 +16,5 @@ public class DescontoGerente implements Desconto{
         }else{
             throw new RuntimeException("Apenas gerentes podem aplicar este desconto.");
         }
-        
     }
 }
